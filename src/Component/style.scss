@@ -1,0 +1,144 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: rgb(6, 6, 24);
+    min-height: 100vh;
+}
+
+.formContainer {
+    width: 80%;
+    height: auto;
+    padding: 20px 0;
+    margin: 20px auto;
+    background-color: rgb(21, 21, 46);
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+
+        .inputs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-direction: column;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .buttonsForm{
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+        }
+
+        input {
+            height: 30px;
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            outline: none;
+            border: none;
+            margin-top: 20px;
+            background-color: #4B4B73;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(6, 6, 24);
+            }
+        }
+    }
+}
+
+.buttonsCont {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .toComplateButtons {
+        display: flex;
+        gap: 10px;
+    }
+
+    button {
+        width: 100px;
+        height: 30px;
+        outline: none;
+        border: none;
+        background-color: #4B4B73;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(21, 21, 46);
+        }
+    }
+
+    .active {
+        background-color: rgb(21, 21, 46);
+    }
+}
+
+.listCont {
+    width: 100%;
+    height: auto;
+    background-color: rgb(6, 6, 24);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 0;
+
+    .listCard {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 0;
+        background-color: rgb(21, 21, 46);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            .time{
+                span{
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .complated {
+            border-radius: 10px;
+            color: lightgreen;
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        .processing {
+            border-radius: 10px;
+            border: 1px solid white;
+            padding: 10px;
+            color: rgb(188, 182, 182);
+        }
+
+        .cardIcon {
+            display: flex;
+            gap: 10px;
+
+            svg {
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            svg:hover {
+                color: #4B4B73;
+            }
+        }
+    }
+}
