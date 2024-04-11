@@ -30,7 +30,7 @@
             column-gap: 20px;
         }
 
-        input {
+        input, select {
             height: 30px;
         }
 
@@ -91,7 +91,16 @@
     flex-direction: column;
     row-gap: 20px;
     padding: 20px 0;
-
+    
+    .notData{
+        background-color: rgb(21, 21, 46);
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .listCard {
         width: 80%;
         height: auto;

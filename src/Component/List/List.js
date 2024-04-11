@@ -59,13 +59,12 @@ export default function List() {
             name: add[0][1],
             lastName: add[1][1],
             location: add[2][1],
-            skill: add[3][1],
-            level: add[4][1],
-            s: add[5][1],
-            color: e.target[5][1].className,
+            level: add[3][1],
+            skill: add[4][1],
+            color: e.target[4][1].className,
             processing: "Processing"
         }]
-        console.log(e.target[5][1].className)
+        console.log(add[4][1])
         localStorage.setItem("listId", +localStorage.getItem("listId") + 1)
         localStorage.setItem("list", JSON.stringify([...JSON.parse(localStorage.getItem("list")), ...saveObj]))
         setList([...JSON.parse(localStorage.getItem("list"))])
@@ -82,7 +81,7 @@ export default function List() {
         let fullDate = `${dd}.${month}.${year}`
         let fullHours = `${hours}:${minute}:${second}`
         list.map((elem) => {
-            if (e.target.id == elem.id) {
+            if (e.currentTarget.id == elem.id) {
                 const complateArr = [
                     {
                         id: elem.id,
@@ -155,8 +154,7 @@ export default function List() {
                 elem.name = editForm[0][1]
                 elem.lastName = editForm[1][1]
                 elem.location = editForm[2][1]
-                elem.skill = editForm[3][1]
-                elem.level = editForm[4][1]
+                elem.level = editForm[3][1]
             }
             editNewArr.push(elem)
         })
@@ -189,7 +187,7 @@ export default function List() {
                                 <span>{elem.level}</span>
                             </div>
                         </div>
-                        <span>{elem.s}</span>
+                        <span>{elem.skill}</span>
                         <div className="processing">{elem.processing}</div>
                         <div className="cardIcon">
                             <MdEdit onClick={edit} id={elem.id}></MdEdit>
@@ -212,12 +210,10 @@ export default function List() {
                                 <span>{elem.hours}</span>
                             </div>
                         </div>
-                        <span>{elem.s}</span>
+                        <span>{elem.skill}</span>
                         <div className="complated">{elem.complated}</div>
                         <div className="cardIcon">
-                            <MdEdit id={elem.id} onClick={complateEdit}></MdEdit>
                             <MdDelete id={elem.id} onClick={complateDelete}></MdDelete>
-                            {/* <MdCheck onClick={complateClick} id={elem.id}></MdCheck> */}
                         </div>
                     </div>
                 })}
